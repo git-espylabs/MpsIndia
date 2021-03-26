@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:text="Customer Name"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/cstName"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/cstDesgn"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Customer Designation"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Designation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/cstDesgn"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/cstPContct"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Primary Contact"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="phone"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="+91"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/cstPContct"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/secContact"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Secondary Contact"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="phone"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="+91"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/secContact"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/etemail"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Customer Email"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Email"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/etemail"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/etlocation"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Customer Location"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Location"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/etlocation"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/spnIndusTypes"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Work Industry"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnIndusTypes"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                app:layout_constraintBottom_toTopOf="@+id/spnPriority"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Priority"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnPriority"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                app:layout_constraintBottom_toTopOf="@+id/spnInterstProperty"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Interest Property"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnInterstProperty"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                app:layout_constraintBottom_toTopOf="@+id/spnProject"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Project Name"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnProject"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                app:layout_constraintBottom_toTopOf="@+id/spnLeadFrom"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Lead Date"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnLeadFrom"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                app:layout_constraintBottom_toTopOf="@+id/etintrestComment"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Interest Comment"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Comment"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/etintrestComment"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/etinPropertLocation"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Property Location"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Location"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/etinPropertLocation"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/etbudget"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Customer Budget"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Budget"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/etbudget"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/etpropertyComment"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Property Comment"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Property Comment"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/etpropertyComment"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/leadDate"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Lead Date"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Lead Date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/leadDate"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintBottom_toTopOf="@+id/desc"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+
+            <TextView
+                android:text="Lead Comment"
+                android:gravity="center|left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"/>
+
+            <com.espy.mps.ui.customviews.CustomEditText
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+                android:id="@+id/desc"
+                android:hint="Lead Comment"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp"
+                android:gravity="center|left"
+                android:background="@drawable/rectangle_plain_theme_color"
+                app:layout_constraintHorizontal_bias=".5"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        app:layout_constraintHorizontal_bias=".5"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/btnSubmit"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:text="add new lead"
+        android:background="@drawable/button_bg_new"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

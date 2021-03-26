@@ -1,0 +1,106 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.espy.mps.ui.customviews.CustomTextView
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/mainLay"
+        android:textColor="@color/Black"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        android:text="LOGIN"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/mainLay"
+        android:padding="2dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="6dp"
+            android:weightSum="3"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.espy.mps.ui.customviews.CustomEditText
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:drawablePadding="7dp"
+                android:id="@+id/username"
+                android:inputType="text"
+                android:textColor="@color/Black"
+                android:textSize="16dp"
+                android:padding="6dp"
+                android:drawableLeft="@drawable/login_user"
+                android:hint="Username"
+                android:imeOptions="actionNext"
+                android:background="@drawable/login_field_bg"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp" />
+
+            <com.espy.mps.ui.customviews.CustomEditText
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:drawablePadding="7dp"
+                android:layout_marginTop="12dp"
+                android:id="@+id/password"
+                android:textColor="@color/Black"
+                android:textSize="16dp"
+                android:padding="6dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/login_password"
+                android:background="@drawable/login_field_bg"
+                android:imeOptions="actionDone"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp" />
+
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg_new"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="submit"
+                android:textAllCaps="true"
+                android:textColor="@color/White"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/footer_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

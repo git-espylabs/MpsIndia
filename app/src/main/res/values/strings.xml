@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MPS</string>
+
+
+    <string name="title_activity_home">Home</string>
+    <string name="menu_home">Home</string>
+
+    <string name="doubleBackToExit">Press again to exit.</string>
+
+
+    <string name="login_Failed">Login Failed! Username or password mismatch</string>
+
+    <string name="common_error_message">OOPS!Something went wrong! Please contact Administrator.</string>
+    <string name="common_exception_message">OOPS! Could not connect to server. Please contact Administrator.</string>
+
+    <string name="punchin_text">Punch In</string>
+    <string name="punchout_text">Punch Out</string>
+    <string name="punchin_success">Attendance marked successfully</string>
+    <string name="punchin_fail">Operation could not be completed at this moment!</string>
+    <string name="cancel">Cancel</string>
+</resources>

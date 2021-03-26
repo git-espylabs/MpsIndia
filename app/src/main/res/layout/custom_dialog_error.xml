@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@color/TransparentFull"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/droidRed">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_error" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OOPS!"
+            android:textColor="@color/Black"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/Black"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu erat tincidunt lacus fermentum rutrum."
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <LinearLayout
+            android:padding="3dp"
+            android:weightSum="2.1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/buttonCancel"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/rect_curved_corner_red_border_white_filled"
+                android:text="Cancel"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:visibility="gone"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/buttonOk"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/rect_curved_corner_red_border_white_filled"
+                android:text="CLOSE"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:elevation="7dp"
+        app:cardElevation="7dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.1"
+        android:id="@+id/m1"
+        android:layout_width="144dp"
+        android:layout_height="144dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/badge1"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_button_bg_theme_fill"
+                android:textColor="@color/White"
+                android:text="0"
+                android:textSize="12dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:id="@+id/menu1"
+                android:padding="18dp"
+                android:textColor="@color/Black"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:text="Todays\nFollow up's"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/m2"
+        android:elevation="7dp"
+        app:cardElevation="7dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_width="144dp"
+        android:layout_height="144dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/badge2"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_button_bg_theme_fill"
+                android:textColor="@color/White"
+                android:text="0"
+                android:textSize="12dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:id="@+id/menu2"
+                android:padding="18dp"
+                android:textColor="@color/Black"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:text="My Leads"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/m3"
+        android:elevation="7dp"
+        app:cardElevation="7dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.9"
+        android:layout_width="144dp"
+        android:layout_height="144dp">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/badge3"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_button_bg_theme_fill"
+                android:textColor="@color/White"
+                android:text="0"
+                android:textSize="12dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/menu3"
+                android:padding="18dp"
+                android:textColor="@color/Black"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:text="Search\nFollow up's"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="2"
+                android:padding="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m4"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge4"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:drawableTop="@drawable/attendance"
+                            android:id="@+id/menu4"
+                            android:padding="9dp"
+                            android:textColor="@color/Black"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Attendance"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m5"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge5"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:drawableTop="@drawable/leads"
+                            android:id="@+id/menu5"
+                            android:padding="9dp"
+                            android:textColor="@color/Black"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Leads"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:padding="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m6"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge6"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:drawableTop="@drawable/expense2"
+                            android:id="@+id/menu6"
+                            android:padding="9dp"
+                            android:textColor="@color/Black"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Expense"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m7"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge7"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:id="@+id/menu7"
+                            android:drawableTop="@drawable/works"
+                            android:textColor="@color/Black"
+                            android:padding="9dp"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Daily\nWorks"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:padding="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m8"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge8"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:drawableTop="@drawable/vehicle"
+                            android:id="@+id/menu8"
+                            android:padding="9dp"
+                            android:textColor="@color/Black"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Vehicle\nDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m9"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge9"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:id="@+id/menu9"
+                            android:drawableTop="@drawable/materials_used"
+                            android:textColor="@color/Black"
+                            android:padding="9dp"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Materials\nUsed Details"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:padding="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m10"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge10"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:drawableTop="@drawable/materials_balanced"
+                            android:id="@+id/menu10"
+                            android:padding="9dp"
+                            android:textColor="@color/Black"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Materials\nBalanced Details"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m11"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge11"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:id="@+id/menu11"
+                            android:drawableTop="@drawable/purchased_bill"
+                            android:textColor="@color/Black"
+                            android:padding="9dp"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Purchase Bill\nDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:padding="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m12"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge12"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:drawableTop="@drawable/materials_balanced"
+                            android:id="@+id/menu12"
+                            android:padding="9dp"
+                            android:textColor="@color/Black"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Materials Request"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="5dp"
+                    app:cardElevation="5dp"
+                    android:visibility="gone"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:id="@+id/m13"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="144dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/badge13"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/rectangle_button_bg_theme_fill"
+                            android:textColor="@color/White"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"/>
+
+                        <TextView
+                            android:id="@+id/menu13"
+                            android:drawableTop="@drawable/purchased_bill"
+                            android:textColor="@color/Black"
+                            android:padding="9dp"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

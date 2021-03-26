@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <TextView
+        android:id="@+id/projectPrompt"
+        android:text="Project Name"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnProject"
+        android:gravity="top|left"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        android:inputType="text"
+        android:textSize="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/projectPrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width= "match_parent"
+        android:layout_height="36dp"/>
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/vehNoPrompt"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/spnProject"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/vehNo"
+        android:gravity="top|left"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        android:hint=""
+        android:padding="7dp"
+        android:inputType="text"
+        android:textSize="16dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/vehNoPrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width= "match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:id="@+id/titlePrompt"
+        android:text="Material Name"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/vehNo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/title"
+        android:gravity="top|left"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        android:padding="7dp"
+        android:textSize="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/titlePrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width= "match_parent"
+        android:layout_height="36dp"/>
+
+
+
+    <TextView
+        android:id="@+id/descPrompt"
+        android:text="Material Description"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/descrption"
+        android:gravity="top|left"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        android:hint="Description"
+        android:padding="7dp"
+        android:lines="4"
+        android:maxLines="4"
+        android:textSize="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/descPrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width= "match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/photoPrompt"
+        android:text="Material Photo"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/descrption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:background="@drawable/dotted_rectangle"
+        android:padding="16dp"
+        android:id="@+id/captureLay"
+        android:gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/photoPrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <TextView
+            android:id="@+id/captureImg"
+            android:visibility="visible"
+            android:drawableTop="@drawable/camera"
+            android:textSize="16dp"
+            android:text="Upload Image"
+            android:drawablePadding="7dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/capImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:padding="7dp"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:textColor="@color/White"
+        android:textSize="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_bg_new"
+        app:layout_constraintTop_toBottomOf="@+id/captureLay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

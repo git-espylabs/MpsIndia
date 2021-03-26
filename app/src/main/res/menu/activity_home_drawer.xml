@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@drawable/punchinicon_menu"
+            android:title="Attendance" />
+
+        <item
+            android:icon="@drawable/follow_up"
+            android:id="@+id/nav_folloup"
+            android:title="Follow up" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_lead"
+            android:title="Lead" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_new_lead"
+            android:title="Add Neew Lead" />
+
+        <item
+            android:icon="@drawable/expense"
+            android:id="@+id/nav_expense"
+            android:title="Expense" />
+
+        <item
+            android:icon="@drawable/note"
+            android:id="@+id/nav_note"
+            android:title="Note" />
+
+        <item
+            android:icon="@drawable/feedback"
+            android:id="@+id/nav_feedback"
+            android:title="Feedback" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_veh_details"
+            android:title="Vehicle Details" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_mat_used"
+            android:title="Materials Used" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_mat_reqst"
+            android:title="Materials Request" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_mat_bal"
+            android:title="Materials Balanced" />
+
+        <item
+            android:icon="@drawable/ic_menu_common"
+            android:id="@+id/nav_purchase"
+            android:title="Purchase Bill" />
+
+        <item
+            android:icon="@drawable/logout"
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+</menu>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="0dp">
+
+        <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center|left"
+                android:text="Next Follow up date"
+                android:textColor="@color/BlackOff"
+                android:textSize="14dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Follow up date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/followupDate"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:text="Next Follow up time"
+                android:textColor="@color/BlackOff"
+                android:textSize="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Follow up time"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/followupTime"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:text="Expected Closing date"
+                android:textColor="@color/BlackOff"
+                android:textSize="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:hint="Expected closing date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:id="@+id/closingDate"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_plain_theme_color"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:text="Select Activity Type"
+                android:textColor="@color/BlackOff"
+                android:textSize="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnActivityTypes"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:text="Select Customer Status"
+                android:textColor="@color/BlackOff"
+                android:textSize="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spnCustomerStatus"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rect_curved_corner_white_filled"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:gravity="center|left"
+                android:text="Remarks"
+                android:textColor="@color/BlackOff"
+                android:textSize="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.espy.mps.ui.customviews.CustomEditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/desc"
+                android:hint="Remarks"
+                android:lines="4"
+                android:textSize="16dp"
+                android:textColor="@color/Black"
+                android:padding="5dp"
+                android:gravity="top|left"
+                android:background="@drawable/rectangle_plain_theme_color"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/history"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+                android:text="FOLLOW HISTORY -->"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintHorizontal_bias=".5"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/btnSubmit"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:text="add followup"
+        android:background="@drawable/button_bg_new"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="41dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

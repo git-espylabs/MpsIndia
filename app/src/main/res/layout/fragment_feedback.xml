@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:text="Customer Status"
+        android:id="@+id/statusprompt"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <Spinner
+        android:layout_marginTop="3dp"
+        android:id="@+id/spnCustomerStatus"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        app:layout_constraintTop_toBottomOf="@+id/statusprompt"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <TextView
+        android:text="Activity Type"
+        android:id="@+id/typeprompt"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/spnCustomerStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <Spinner
+        android:id="@+id/spnActivityTypes"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        app:layout_constraintTop_toBottomOf="@+id/typeprompt"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <TextView
+        android:text="Remarks"
+        android:id="@+id/remarksPrompt"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/spnActivityTypes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <com.espy.mps.ui.customviews.CustomEditText
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/remarksPrompt"
+        android:id="@+id/desc"
+        android:hint="Remarks"
+        android:lines="7"
+        android:textSize="16dp"
+        android:textColor="@color/Black"
+        android:padding="5dp"
+        android:gravity="top|left"
+        android:background="@drawable/rect_curved_corner_white_filled"
+        app:layout_constraintHorizontal_bias=".5"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        app:layout_constraintHorizontal_bias=".5"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/btnSubmit"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:text="add feedback"
+        android:background="@drawable/button_bg_new"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="41dp" />
+
+    <TextView
+        android:id="@+id/history"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+        android:text="FEEDBACK HISTORY -->"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

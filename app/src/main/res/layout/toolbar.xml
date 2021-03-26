@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbCommon"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarEspyApp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:elevation="0dp">
+
+        <LinearLayout
+                android:baselineAligned="false"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:paddingEnd="7dp"
+                    android:id="@+id/customToolbarBack"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingRight="7dp">
+
+                <ImageView
+                    android:visibility="visible"
+                    android:id="@+id/toolbarBack"
+                    android:contentDescription=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/toolbarTitle"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:background="@null"
+                    android:id="@+id/toolbar_title"
+                    android:text="@string/app_name"
+                    android:textSize="24dp"
+                    android:gravity="center"
+                    android:textColor="@color/White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:paddingEnd="7dp"
+                    android:visibility="invisible"
+                    android:id="@+id/customToolbarSearch"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingRight="7dp">
+
+                <ImageView
+                    android:id="@+id/toolbarSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</merge>

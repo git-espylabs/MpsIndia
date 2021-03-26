@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center|left"
+        android:text="Select Date"
+        android:textColor="@color/Black"
+        android:textSize="14dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spn1Lay" />
+    <com.espy.mps.ui.customviews.CustomTextView
+        android:drawableLeft="@drawable/calendar"
+        android:drawablePadding="7dp"
+        android:id="@+id/edate"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/rectangle_plain_theme_color"
+        android:gravity="center|left"
+        android:hint="Expense Date"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/promptspn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center|left"
+        android:text="Select Expense type"
+        android:textColor="@color/Black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spn1Lay"
+        app:layout_constraintTop_toBottomOf="@+id/edate" />
+    <LinearLayout
+        android:id="@+id/spn1Lay"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/rect_curved_corner_green_border_white_filled"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promptspn">
+
+        <Spinner
+            android:id="@+id/spnExpenseType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_bg_new"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="submit"
+        android:textAllCaps="true"
+        android:textColor="@color/White"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="EXPENSE HISTORY -->"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+    <com.espy.mps.ui.customviews.CustomEditText
+        android:id="@+id/eamount"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/rectangle_plain_theme_color"
+        android:gravity="center|left"
+        android:hint="Expense Amount"
+        android:padding="5dp"
+        android:textSize="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/spn1Lay" />
+
+    <com.espy.mps.ui.customviews.CustomEditText
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/rectangle_plain_theme_color"
+        android:gravity="top|left"
+        android:hint="Description"
+        android:lines="7"
+        android:padding="5dp"
+        android:textColor="@color/Black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eamount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
