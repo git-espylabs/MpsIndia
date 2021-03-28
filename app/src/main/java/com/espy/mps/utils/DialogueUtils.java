@@ -2,6 +2,7 @@ package com.espy.mps.utils;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
@@ -162,5 +163,42 @@ public class DialogueUtils {
 
         dialog.show();
     }
+
+
+    public void showUpdateNotice(String title, String messgae, DialogInteractionListener listener, int dialogueRequestCode) {
+        final Dialog dialog = new Dialog(context, R.style.custom_ui_dialogue);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.custom_dialog_warning);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        TextView statusText =dialog.findViewById(R.id.statusText);
+        TextView text =dialog.findViewById(R.id.message);
+        Button buttonCancel =  dialog.findViewById(R.id.buttonCancel);
+        Button buttonOk =  dialog.findViewById(R.id.buttonOk);
+
+        statusText.setText(title);
+        text.setText(messgae);
+        buttonCancel.setVisibility(View.GONE);
+        buttonOk.setText("Update");
+
+        buttonOk.setOnClickListener(v ->
+        {
+            dialog.dismiss();
+            if (listener != null) {
+                listener.onPositiveResponse(dialogueRequestCode);
+            }
+        });
+
+        /*buttonCancel.setOnClickListener(v ->
+        {
+            dialog.dismiss();
+            if (listener != null) {
+                listener.onNegetiveResponse(dialogueRequestCode);
+            }
+        });*/
+
+        dialog.show();
+    }
+
 }
 

@@ -1,6 +1,7 @@
 package com.espy.mps.apiutils;
 
 import com.espy.mps.models.AcitivityTypeMaster;
+import com.espy.mps.models.AppVersionMaster;
 import com.espy.mps.models.CustomerDetailModelMaster;
 import com.espy.mps.models.CustomerListingMaster;
 import com.espy.mps.models.CustomerPriorityMaster;
@@ -181,4 +182,7 @@ public interface GetDataService {
 
     @POST("project_name")
     Call<ProjectNameListMaster> getProjectIds(@Body RequestBody json);
+
+    @POST("version_check")
+    Call<AppVersionMaster> getAppVersionFromServer(@Body RequestBody json);
 }

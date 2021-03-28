@@ -1,5 +1,7 @@
 package com.espy.mps.ui.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,13 +9,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 
+import com.espy.mps.BuildConfig;
 import com.espy.mps.R;
 import com.espy.mps.apiutils.WebserviceUtils;
 import com.espy.mps.app.AppSession;
 import com.espy.mps.base.BaseFragment;
+import com.espy.mps.interfaces.AppVersionCallback;
+import com.espy.mps.interfaces.DialogInteractionListener;
 import com.espy.mps.interfaces.HomeIteneriesCallback;
+import com.espy.mps.models.AppVersionTrans;
 import com.espy.mps.preferences.AppPreference;
 import com.espy.mps.ui.activities.AttendanceActivity;
 import com.espy.mps.ui.activities.CustomerListingActivity;
@@ -27,6 +34,7 @@ import com.espy.mps.ui.activities.PurchaseBillActivity;
 import com.espy.mps.ui.activities.VehicleDetailsActivity;
 import com.espy.mps.ui.activities.WorkDetailsActivity;
 import com.espy.mps.utils.CommonUtils;
+import com.espy.mps.utils.DialogueUtils;
 import com.espy.mps.utils.NetworkUtils;
 
 import java.text.SimpleDateFormat;
@@ -38,7 +46,7 @@ import butterknife.ButterKnife;
 import static com.espy.mps.base.BaseActivity.dismissProgress;
 import static com.espy.mps.base.BaseActivity.showProgress;
 
-public class HomeFragment extends BaseFragment implements HomeIteneriesCallback {
+public class HomeFragment extends BaseFragment implements HomeIteneriesCallback, AppVersionCallback, DialogInteractionListener {
 
 
     @BindView(R.id.badge1)
@@ -97,11 +105,17 @@ public class HomeFragment extends BaseFragment implements HomeIteneriesCallback 
         }
     }
 
+    private void checkAppVersion(){
+        if (NetworkUtils.isNetworkConnected(getActivity())){
+            new WebserviceUtils(getActivity()).getAppVersion(this);
+        }
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
 
-        getIndividualFollowupCount();
+        checkAppVersion();
 
         m1.setOnClickListener(view1 -> {
             AppSession.isIndividual = true;
@@ -203,5 +217,46 @@ public class HomeFragment extends BaseFragment implements HomeIteneriesCallback 
     @Override
     public void onApiErrorResponse(String mesage, int type) {
         dismissProgress();
+    }
+
+    @Override
+    public void onAppVersionReceived(AppVersionTrans version) {
+        if (Integer.parseInt(version.getVersion_code()) > BuildConfig.VERSION_CODE && !version.getVersion_name().equals(BuildConfig.VERSION_NAME)){
+            String message = "You are using an out dated version(v" + BuildConfig.VERSION_NAME + ") of MPS! An updated version(v" + version.getVersion_name() + ")available in Google Play Store.";
+            new DialogueUtils(getActivity()).showUpdateNotice("Update Required!", message, this, 100256);
+        }else {
+            getIndividualFollowupCount();
+        }
+    }
+
+    @Override
+    public void onApiErrorResponse(String message) {
+        getIndividualFollowupCount();
+    }
+
+    @Override
+    public void onPositiveResponse(int requestCode) {
+        if (requestCode == 100256){
+            try {
+                startActivityForResult(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+getActivity().getPackageName())), 10001);
+            } catch (Exception e) {
+                e.printStackTrace();
+                startActivityForResult(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id="+getActivity().getPackageName())), 10001);
+            }
+        }
+    }
+
+    @Override
+    public void onNegetiveResponse(int requestCode) {
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 10001){
+            checkAppVersion();
+        }
+
     }
 }

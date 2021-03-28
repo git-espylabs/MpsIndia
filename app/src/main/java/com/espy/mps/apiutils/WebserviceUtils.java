@@ -6,6 +6,7 @@ import android.content.res.AssetManager;
 import com.espy.mps.R;
 import com.espy.mps.app.AppSession;
 import com.espy.mps.app.Applog;
+import com.espy.mps.interfaces.AppVersionCallback;
 import com.espy.mps.interfaces.AttendanceCallbacks;
 import com.espy.mps.interfaces.CommonApiInteractionListener;
 import com.espy.mps.interfaces.CustomerCallbacks;
@@ -21,6 +22,7 @@ import com.espy.mps.interfaces.LoginCallbacks;
 import com.espy.mps.interfaces.NotesInterface;
 import com.espy.mps.interfaces.WorkDetailsCallBack;
 import com.espy.mps.models.AcitivityTypeMaster;
+import com.espy.mps.models.AppVersionMaster;
 import com.espy.mps.models.CustomerDetailModelMaster;
 import com.espy.mps.models.CustomerListingMaster;
 import com.espy.mps.models.CustomerPriorityMaster;
@@ -1412,6 +1414,42 @@ public class WebserviceUtils {
             @Override
             public void onFailure(Call<CommonResponseParser> call, Throwable t) {
                 callBack.onApiErrorResponse(context.getResources().getString(R.string.common_exception_message), 1117);
+            }
+        });
+    }
+
+
+    public void getAppVersion(AppVersionCallback callback){
+        String jsonData = "";
+        JSONObject json = null;
+        try {
+            json = new JSONObject();
+            json.put("secure_key", ApiConstants.APP_SECURE_KEY);
+            jsonData = json.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"),jsonData);
+        Call<AppVersionMaster> call = service.getAppVersionFromServer(body);
+        call.enqueue(new Callback<AppVersionMaster>() {
+            @Override
+            public void onResponse(Call<AppVersionMaster> call, Response<AppVersionMaster> response) {
+                try {
+                    if (response != null && response.body() != null && response.body().getAppVersionTrans() != null && !response.body().getAppVersionTrans().isEmpty()) {
+                        callback.onAppVersionReceived(response.body().getAppVersionTrans().get(0));
+                    } else {
+                        callback.onApiErrorResponse(context.getResources().getString(R.string.common_error_message));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    callback.onApiErrorResponse(context.getResources().getString(R.string.common_error_message));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<AppVersionMaster> call, Throwable t) {
+                callback.onApiErrorResponse(context.getResources().getString(R.string.common_exception_message));
             }
         });
     }
