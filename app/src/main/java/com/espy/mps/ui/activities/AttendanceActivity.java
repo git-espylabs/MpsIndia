@@ -7,9 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.espy.mps.base.BaseActivity;
-import com.espy.mps.ui.fragments.AttendanceFragment;
-
-import static com.espy.mps.utils.FragmentConstants.ATTENDANCE_FRAGMENT;
+import com.espy.mps.ui.fragments.AttendanceFragmentNew;
+import static com.espy.mps.utils.FragmentConstants.ATTENDANCE_FRAGMENT_NEW;
 
 public class AttendanceActivity extends BaseActivity
 {
@@ -21,7 +20,7 @@ public class AttendanceActivity extends BaseActivity
         setToolbarProperties(true, "Attendance", true);
         enableBottomBar(false);
 
-        setFragment(new AttendanceFragment(),ATTENDANCE_FRAGMENT,null);
+        setFragment(new AttendanceFragmentNew(),ATTENDANCE_FRAGMENT_NEW,null);
     }
 
     @Override
@@ -33,7 +32,7 @@ public class AttendanceActivity extends BaseActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        AttendanceFragment fragment = (AttendanceFragment ) getSupportFragmentManager().findFragmentByTag(ATTENDANCE_FRAGMENT);
+        AttendanceFragmentNew fragment = (AttendanceFragmentNew) getSupportFragmentManager().findFragmentByTag(ATTENDANCE_FRAGMENT_NEW);
         if (fragment != null) {
             fragment.onActivityResult(requestCode, resultCode, data);
         }

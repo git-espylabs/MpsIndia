@@ -22,4 +22,5 @@ public class FragmentConstants {
     public static final String MATERIAL_DETAILS_FRAGMENT2 = "MATERIAL DETAILS FRAGMENT2";
     public static final String PURCHASE_DETAILS_FRAGMENT = "PURCHASE DETAILS FRAGMENT";
     public static final String MATERIAL_REQUEST_FRAGMENT = "MATERIAL REQUEST FRAGMENT";
+    public static final String ATTENDANCE_FRAGMENT_NEW = "ATTENDANCE FRAGMENT_NEW";
 }

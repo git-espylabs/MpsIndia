@@ -243,6 +243,11 @@ public class MaterialDetailsFragmennt2 extends BaseFragment implements DialogInt
     }
 
     @Override
+    public void onLocationTrackUpdate(Location location, int i) {
+
+    }
+
+    @Override
     public void onLocationSettingsSatisfied() {
         GPSManager.getInstance().getLastLocation(getActivity());
     }

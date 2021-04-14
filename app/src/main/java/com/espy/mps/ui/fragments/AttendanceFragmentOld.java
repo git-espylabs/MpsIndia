@@ -1,6 +1,5 @@
 package com.espy.mps.ui.fragments;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,10 +13,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
-import com.bumptech.glide.Glide;
 import com.espy.fusedlocationapi.GPSListener;
 import com.espy.fusedlocationapi.GPSManager;
 import com.espy.mps.R;
@@ -47,7 +44,7 @@ import static com.espy.mps.base.BaseActivity.showProgress;
 import static com.espy.mps.utils.DialogueUtils.ATTENDANCE_UPLOAD_ERROR;
 import static com.espy.mps.utils.DialogueUtils.ATTENDANCE_UPLOAD_SUCCESS;
 
-public class AttendanceFragment extends BaseFragment implements View.OnClickListener, AttendanceCallbacks, DialogInteractionListener, GPSListener {
+public class AttendanceFragmentOld extends BaseFragment implements View.OnClickListener, AttendanceCallbacks, DialogInteractionListener, GPSListener {
 
     @BindView(R.id.punch)
     CustomImageView punch;
@@ -152,7 +149,7 @@ public class AttendanceFragment extends BaseFragment implements View.OnClickList
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_attendance, container, false);
+        View view = inflater.inflate(R.layout.fragment_attendance_old, container, false);
         ButterKnife.bind(this, view);
 
         GPSManager.getInstance().setGpsCallback(this);
@@ -241,6 +238,11 @@ public class AttendanceFragment extends BaseFragment implements View.OnClickList
     public void onLocationUpdate(Location location, int i) {
         AppSession.location = location;
         sendAttendance();
+    }
+
+    @Override
+    public void onLocationTrackUpdate(Location location, int i) {
+
     }
 
     @Override

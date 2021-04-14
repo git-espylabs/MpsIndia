@@ -55,8 +55,8 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener,
         btnLogin.setOnClickListener(this);
 
         if (BuildConfig.DEBUG){
-            et_username.setText("superadmin");
-            et_password.setText("superadmin@123");
+            et_username.setText("vinodv");
+            et_password.setText("vinodv123");
         }
     }
 

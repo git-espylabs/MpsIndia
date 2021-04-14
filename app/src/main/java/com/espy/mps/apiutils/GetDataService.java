@@ -37,6 +37,15 @@ public interface GetDataService {
     Call<CommonResponseParser> sendAttendance(@Body RequestBody json);
 
     @Multipart
+    @POST("add_attendance_new")
+    Call<CommonResponseParser> insertAttendance(@Part("secure_key") RequestBody secure_key,
+                                                @Part("attend_staff_loginid") RequestBody attend_staff_loginid,
+                                                @Part("attend_status") RequestBody attend_status,
+                                                @Part("attend_latt") RequestBody attend_latt,
+                                                @Part("attend_long") RequestBody attend_long,
+                                                @Part MultipartBody.Part image);
+
+    @Multipart
     @POST("display_pic")
     Call<CommonResponseParser> insertDisplayPic(@Part("displaypic_supmrktid") RequestBody displaypic_supmrktid,
                                                 @Part("displaypic_latt") RequestBody displaypic_latt,

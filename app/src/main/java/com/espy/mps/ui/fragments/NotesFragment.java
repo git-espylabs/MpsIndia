@@ -98,6 +98,11 @@ public class NotesFragment extends BaseFragment implements NotesInterface, Dialo
     }
 
     @Override
+    public void onLocationTrackUpdate(Location location, int i) {
+
+    }
+
+    @Override
     public void onLocationSettingsSatisfied() {
         GPSManager.getInstance().getLastLocation(getActivity());
     }

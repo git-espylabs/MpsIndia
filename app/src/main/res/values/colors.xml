@@ -31,4 +31,5 @@
 
     <color name="theme_color_main">#3D3447</color>
     <color name="theme_color_sub">#CBB691</color>
+    <color name="GreyGreenish">#CDDFE6DF</color>
 </resources>

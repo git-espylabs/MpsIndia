@@ -219,6 +219,11 @@ public class ExpenseFragment extends BaseFragment implements ExpenseInterfaces, 
     }
 
     @Override
+    public void onLocationTrackUpdate(Location location, int i) {
+
+    }
+
+    @Override
     public void onLocationSettingsSatisfied() {
         GPSManager.getInstance().getLastLocation(getActivity());
     }

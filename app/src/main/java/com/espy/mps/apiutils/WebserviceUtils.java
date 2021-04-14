@@ -2,6 +2,7 @@ package com.espy.mps.apiutils;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import com.espy.mps.R;
 import com.espy.mps.app.AppSession;
@@ -163,6 +164,67 @@ public class WebserviceUtils {
                 callbacks.onSendingAttendanceFailed(context.getResources().getString(R.string.common_exception_message));
             }
         });
+    }
+
+    public void insertAttendanceMultiPart(String status, String lat, String longs, String imageFile, AttendanceCallbacks callbacks){
+
+        try {
+            File file = null;
+            if (imageFile != null && imageFile.length()>0) {
+                file = new File(imageFile);
+            } else {
+                AssetManager am = context.getAssets();
+                try {
+                    InputStream inputStream = am.open("defaults/noimg.jpg");
+                    file = stream2file(inputStream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            RequestBody requestFile =
+                    RequestBody.create(MediaType.parse("multipart/form-data"), file);
+
+            MultipartBody.Part body =
+                    MultipartBody.Part.createFormData("userfile", file.getName(), requestFile);
+
+            RequestBody secure_key    =
+                    RequestBody.create(MediaType.parse("multipart/form-data"), ApiConstants.APP_SECURE_KEY);
+            RequestBody attend_staff_loginid         =
+                    RequestBody.create(MediaType.parse("multipart/form-data"), AppPreference.getPrefUserId(context));
+
+            RequestBody attend_status    =
+                    RequestBody.create(MediaType.parse("multipart/form-data"), status);
+            RequestBody attend_latt  =
+                    RequestBody.create(MediaType.parse("multipart/form-data"), lat);
+            RequestBody attend_long     =
+                    RequestBody.create(MediaType.parse("multipart/form-data"), longs);
+
+
+            Call<CommonResponseParser> call = service.insertAttendance(secure_key, attend_staff_loginid, attend_status, attend_latt, attend_long, body);
+            call.enqueue(new Callback<CommonResponseParser>() {
+                @Override
+                public void onResponse(Call<CommonResponseParser> call, Response<CommonResponseParser> response) {
+                    try {
+                        if (response != null && response.body() != null && response.body().getResult() != null) {
+                            callbacks.onAttendanceSend(response.body().getResult());
+                        } else {
+                            callbacks.onSendingAttendanceFailed(context.getResources().getString(R.string.common_error_message));
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        callbacks.onSendingAttendanceFailed(context.getResources().getString(R.string.common_error_message));
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<CommonResponseParser> call, Throwable t) {
+                    Log.e("", t.getLocalizedMessage());
+                    callbacks.onSendingAttendanceFailed(context.getResources().getString(R.string.common_exception_message));
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void getExpenseTypesList(ExpenseInterfaces callback){

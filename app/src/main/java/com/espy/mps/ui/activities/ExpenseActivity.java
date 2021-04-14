@@ -1,18 +1,13 @@
 package com.espy.mps.ui.activities;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import com.espy.mps.R;
 import com.espy.mps.base.BaseActivity;
-import com.espy.mps.ui.fragments.AttendanceFragment;
 import com.espy.mps.ui.fragments.ExpenseFragment;
 
-import static com.espy.mps.utils.FragmentConstants.ATTENDANCE_FRAGMENT;
 import static com.espy.mps.utils.FragmentConstants.EXPENSE_FRAGMENT;
 
 public class ExpenseActivity extends BaseActivity{

@@ -323,6 +323,11 @@ public class WorkDetailsFragment extends BaseFragment implements DialogInteracti
     }
 
     @Override
+    public void onLocationTrackUpdate(Location location, int i) {
+
+    }
+
+    @Override
     public void onLocationSettingsSatisfied() {
         GPSManager.getInstance().getLastLocation(getActivity());
     }

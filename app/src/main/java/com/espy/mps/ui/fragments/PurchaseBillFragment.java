@@ -243,6 +243,11 @@ public class PurchaseBillFragment extends BaseFragment implements DialogInteract
     }
 
     @Override
+    public void onLocationTrackUpdate(Location location, int i) {
+
+    }
+
+    @Override
     public void onLocationSettingsSatisfied() {
         GPSManager.getInstance().getLastLocation(getActivity());
     }
