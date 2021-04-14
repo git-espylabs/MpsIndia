@@ -180,6 +180,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -228,6 +229,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -287,6 +289,7 @@
                     android:elevation="5dp"
                     app:cardElevation="5dp"
                     app:cardUseCompatPadding="true"
+                    android:visibility="gone"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -334,6 +337,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -392,6 +396,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -440,6 +445,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -498,6 +504,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -546,6 +553,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -604,6 +612,7 @@
                 <androidx.cardview.widget.CardView
                     android:elevation="5dp"
                     app:cardElevation="5dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"

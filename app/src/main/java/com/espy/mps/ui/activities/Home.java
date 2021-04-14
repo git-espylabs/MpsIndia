@@ -84,16 +84,30 @@ public class Home extends BaseActivity implements NavigationView.OnNavigationIte
     {
         Menu nav_Menu = navigationView.getMenu();
         String usertype = AppPreference.getPrefUType(this);
-        if (usertype.equals("11") | usertype.equals("12") | usertype.equals("13") |
-                usertype.equals("5") | usertype.equals("6")){
+        if (usertype.equals("11") || usertype.equals("12") || usertype.equals("13") |
+                usertype.equals("5") || usertype.equals("6")){
             nav_Menu.findItem(R.id.nav_folloup).setVisible(false);
             nav_Menu.findItem(R.id.nav_lead).setVisible(false);
             nav_Menu.findItem(R.id.nav_new_lead).setVisible(false);
             nav_Menu.findItem(R.id.nav_note).setVisible(false);
             nav_Menu.findItem(R.id.nav_feedback).setVisible(false);
 
-        }else if (usertype.equals("4") | usertype.equals("3") | usertype.equals("1") |
-                usertype.equals("7") | usertype.equals("8") | usertype.equals("9")){
+        }else if (usertype.equals("4") || usertype.equals("3") || usertype.equals("1") |
+                usertype.equals("7") || usertype.equals("8") || usertype.equals("9")){
+            nav_Menu.findItem(R.id.nav_folloup).setVisible(false);
+            nav_Menu.findItem(R.id.nav_note).setVisible(false);
+            nav_Menu.findItem(R.id.nav_feedback).setVisible(false);
+            nav_Menu.findItem(R.id.nav_veh_details).setVisible(false);
+            nav_Menu.findItem(R.id.nav_mat_used).setVisible(false);
+            nav_Menu.findItem(R.id.nav_mat_reqst).setVisible(false);
+            nav_Menu.findItem(R.id.nav_mat_bal).setVisible(false);
+            nav_Menu.findItem(R.id.nav_purchase).setVisible(false);
+        }else if (usertype.equals("14") || usertype.equals("15")){
+            nav_Menu.findItem(R.id.nav_folloup).setVisible(false);
+            nav_Menu.findItem(R.id.nav_lead).setVisible(false);
+            nav_Menu.findItem(R.id.nav_new_lead).setVisible(false);
+            nav_Menu.findItem(R.id.nav_note).setVisible(false);
+            nav_Menu.findItem(R.id.nav_feedback).setVisible(false);
             nav_Menu.findItem(R.id.nav_veh_details).setVisible(false);
             nav_Menu.findItem(R.id.nav_mat_used).setVisible(false);
             nav_Menu.findItem(R.id.nav_mat_reqst).setVisible(false);

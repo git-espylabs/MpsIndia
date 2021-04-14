@@ -168,30 +168,27 @@ public class HomeFragment extends BaseFragment implements HomeIteneriesCallback,
         });
 
         String usertype = AppPreference.getPrefUType(getActivity());
-        if (usertype.equals("11") | usertype.equals("12") | usertype.equals("13") |
-                usertype.equals("5") | usertype.equals("6")){
-            m5.setVisibility(View.GONE);
+        if (usertype.equals("11") || usertype.equals("12") || usertype.equals("13") ||
+                usertype.equals("5") || usertype.equals("6")){
+            m4.setVisibility(View.VISIBLE);
+            m6.setVisibility(View.VISIBLE);
+            m7.setVisibility(View.VISIBLE);
             m8.setVisibility(View.VISIBLE);
             m9.setVisibility(View.VISIBLE);
             m10.setVisibility(View.VISIBLE);
             m11.setVisibility(View.VISIBLE);
             m12.setVisibility(View.VISIBLE);
 
-        } else if (usertype.equals("4") | usertype.equals("3") | usertype.equals("1") |
-                usertype.equals("7") | usertype.equals("8") | usertype.equals("9")) {
+        } else if (usertype.equals("4") || usertype.equals("3") || usertype.equals("1") |
+                usertype.equals("7") || usertype.equals("8") || usertype.equals("9")) {
+            m4.setVisibility(View.VISIBLE);
             m5.setVisibility(View.VISIBLE);
-            m8.setVisibility(View.GONE);
-            m9.setVisibility(View.GONE);
-            m10.setVisibility(View.GONE);
-            m11.setVisibility(View.GONE);
-            m12.setVisibility(View.GONE);
-        }else {
-            m5.setVisibility(View.VISIBLE);
-            m8.setVisibility(View.VISIBLE);
-            m9.setVisibility(View.VISIBLE);
-            m10.setVisibility(View.VISIBLE);
-            m11.setVisibility(View.VISIBLE);
-            m12.setVisibility(View.VISIBLE);
+            m6.setVisibility(View.VISIBLE);
+            m7.setVisibility(View.VISIBLE);
+        } else if (usertype.equals("14") || usertype.equals("15")) {
+            m4.setVisibility(View.VISIBLE);
+            m6.setVisibility(View.VISIBLE);
+            m7.setVisibility(View.VISIBLE);
         }
 
         return view;
